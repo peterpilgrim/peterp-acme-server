@@ -2,10 +2,10 @@ README
 ======================
 
 
-This is my answer to the Scala developer test for ACME Peabody
+This is my answer to the Scala developer test for *ACME Peabody Invention*
 
 
-This code was written against Scala 2.11 and uses Codehale's DropWizard as a MicroService server
+This code was written against Scala 2.11 and uses Codehale's [Dropwizard Application Framework](http://dropwizard.io/) as a Microservices application server
 
 You will need a SBT 0.13 or better
 
@@ -53,7 +53,7 @@ The output will be JSON.
 
 Peter Pilgrim
 
-Saturday, 28th November 2014
+Saturday, 21th November 2014
 
 [http://www.xenonique.co.uk/blog/](http://www.xenonique.co.uk/blog/)
 

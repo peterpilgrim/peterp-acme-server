@@ -8,7 +8,8 @@ Context
 
 The context I have been writing Scala code commercially for much of 2014 in the GOV.UK project largely.
 I worked on the Registered Traveller for a lot of the time, which was a Scala 2.10 and Play Framework application.
-This project made particularly use of the DropWizard framework for the Microservice architecture.
+This project made particularly use of the [Dropwizard Framework](http://Dropwizard.io/) for the
+[Microservices architecture](http://en.wikipedia.org/wiki/Microservices).
 
 
 
@@ -63,7 +64,7 @@ I have some responses for the technical reviewer(s) at ACME.
 
     * using com.google.common.base.Optional
 
-        * (PP this is because I stupidly used the DropWizard framework, which was written in Java. Although there is a Scala module, some of the artefacts from DropWizard Java modules, e.g. JAX-RS seep through to the Scala side)
+        * (PP this is because I stupidly used the Dropwizard framework, which was written in Java. Although there is a Scala module, some of the artefacts from Dropwizard Java modules, e.g. JAX-RS seep through to the Scala side)
 
     * all of the loops are for loops with indexes
 
@@ -83,10 +84,19 @@ I have some responses for the technical reviewer(s) at ACME.
 
     * We think he has not implemented the specified query format (we’d know if we could run it and try)
 
-        * (PP I accept, I re-examined that URL and see now that it is not a URI with a search parameter (?q). It is just a portion of the path. So I am unsure now that DropWizard and therefore the underlying JAX-RS implementation Jersey could have helped here. Of the top of my head, I would have to been a Java Servlet that just implements the GET portion of the request. If the framework was the problem, I could have chosen another Scala based framework. No matter. It is what it is)
+        * (PP I accept, I re-examined that URL and see now that it is not a URI with a search parameter (?q). It is just a portion of the path. So I am unsure now that Dropwizard and therefore the underlying JAX-RS implementation Jersey could have helped here. Of the top of my head, I would have to been a Java Servlet that just implements the GET portion of the request. If the framework was the problem, I could have chosen another Scala based framework. No matter. It is what it is)
 
 
-I think on the balance my decision to use Code Hale's DropWizard was the reason for the test failure, because it is written in Java and not in Scala. Hence the Guava 'Optional' versus 'Option' disagreement that we have. DropWizard has some great benefits like health check, metrics, Jetty and JAX-RS, fast Jackson JSON serialisation and it is the framework that I came across at the Home Office GOV.UK. There is Scala Pimp My Library that I used at the Home Office. I worked on the Registered Traveller project, at GOV.UK which incidentally is 100% written in Scala with the web front-end in Play Framework. Therefore your comment, "Java developer who has learned some Scala syntax in general" does invalid my experience, because you did not have all the information to hand in your analysis. You are entitled to your opinion, of course, as I am to mind.
+I think on the balance my decision to use Code Hale's Dropwizard was the reason for the test failure, because it is written in Java and not in Scala.
+Hence the Guava 'Optional' versus 'Option' disagreement that we have.
+Dropwizard has some great benefits like health check, metrics, Jetty and JAX-RS, fast Jackson
+JSON serialisation and it is the framework that I came across at the Home Office GOV.UK. There is a
+Scala *Pimp My Library* module for Dropwizard that I used at the Home Office. I worked on the [Registered Traveller project](https://www.gov.uk/registered-traveller),
+at [GOV.UK](https://www.gov.uk/transformation) which incidentally is 100% written in Scala with the web front-end in Play Framework.
+Therefore your comment, "Java developer who has learned some Scala syntax in general" does *NOT*
+whatsoever invalid my own personal career and experience,
+because you did not have all the information to hand in your analysis.
+You, of course, are entitled to your opinion as I am, to mine.
 
 
 The End
