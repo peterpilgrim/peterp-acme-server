@@ -22,17 +22,27 @@ The Feedback
 
 
 Good points:
+
     * There are some tests.
+
     * The tests seem reasonable.
+
     * There is a README which is accurate to the extent we can check it
 
 Bad points:
+
     * It reads as if it’s written by a Java developer who has learned some Scala syntax in general, and specifically:
+
         * using com.google.common.base.Optional
+
         * all of the loops are for loops with indexes
+
     * All the code is synchronous, even for network calls.
+
         * We can’t run the solution because there is a configuration file missing.
+
         * We can’t run the tests because there is a test data file missing (not the same file as above).
+
         * We think he has not implemented the specified query format (we’d know if we could run it and try)
 
 
